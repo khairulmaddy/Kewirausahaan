@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Outfit", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --animate-gradient-shift: gradient-shift 10s infinite linear;
+  --animate-soft-bounce: soft-bounce 3s ease-in-out infinite;
+  
+  @keyframes gradient-shift {
+    0% { background-color: #FF6B35; }
+    33% { background-color: #4ECDC4; }
+    66% { background-color: #FFD166; }
+    100% { background-color: #FF6B35; }
+  }
+  @keyframes soft-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+}
+
+/* Custom background pattern for a professional academic yet modern business feel */
+body {
+  background-color: #F4F1EA;
+  color: #1A1A1A;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Neo-Brutalist Classes */
+.brutalist-card {
+  border: 4px solid #1A1A1A;
+  box-shadow: 6px 6px 0px #1A1A1A;
+  background-color: #FFFFFF;
+}
+
+.brutalist-card-teal {
+  border: 4px solid #1A1A1A;
+  box-shadow: 6px 6px 0px #1A1A1A;
+  background-color: #4ECDC4;
+}
+
+.brutalist-card-orange {
+  border: 4px solid #1A1A1A;
+  box-shadow: 6px 6px 0px #1A1A1A;
+  background-color: #FF6B35;
+}
+
+.brutalist-card-yellow {
+  border: 4px solid #1A1A1A;
+  box-shadow: 6px 6px 0px #1A1A1A;
+  background-color: #FFD166;
+}
+
+.brutalist-btn {
+  border: 3px solid #1A1A1A;
+  box-shadow: 4px 4px 0px #1A1A1A;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.brutalist-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px #1A1A1A;
+}
+
+.brutalist-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #1A1A1A;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F1EA;
+  border-left: 2px solid #1A1A1A;
+}
+::-webkit-scrollbar-thumb {
+  background: #1A1A1A;
+  border-radius: 0px;
+}
+
+

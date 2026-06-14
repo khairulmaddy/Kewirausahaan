@@ -1,0 +1,6 @@
+{
+  "name": "Ujian Kreatif, Inovasi dan Kewirausahaan",
+  "description": "Aplikasi ujian interaktif mata pelajaran Kreatif, Inovasi dan Kewirausahaan dengan rekapitulasi nilai siswa dan panel admin.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
