@@ -162,7 +162,7 @@ export default function AdminPanel({ records, onClose, onClearAll, onDeleteRecor
                 placeholder="Masukkan username..."
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                className="block w-full px-4 py-2.5 border-4 border-black rounded-none bg-white text-black font-semibold uppercase text-sm shadow-[3px_3px_0px_#1A1A1A] focus:outline-hidden"
+                className="block w-full px-4 py-2.5 border-4 border-black rounded-none bg-white text-black font-semibold text-sm shadow-[3px_3px_0px_#1A1A1A] focus:outline-hidden"
               />
             </div>
 
@@ -177,7 +177,7 @@ export default function AdminPanel({ records, onClose, onClearAll, onDeleteRecor
                   placeholder="Masukkan password admin..."
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="block w-full px-4 py-2.5 border-4 border-black rounded-none bg-white text-black font-semibold uppercase text-sm shadow-[3px_3px_0px_#1A1A1A] focus:outline-hidden pr-10"
+                  className="block w-full px-4 py-2.5 border-4 border-black rounded-none bg-white text-black font-semibold text-sm shadow-[3px_3px_0px_#1A1A1A] focus:outline-hidden pr-10"
                 />
                 <button
                   type="button"
@@ -189,11 +189,7 @@ export default function AdminPanel({ records, onClose, onClearAll, onDeleteRecor
               </div>
             </div>
 
-            <div className="p-3.5 bg-yellow-250/50 border-2 border-black text-[11px] text-black font-bold leading-relaxed font-mono">
-              <strong>Petunjuk Akun:</strong><br />
-              • Username: <code className="bg-yellow-300 px-1 border border-black font-black">admin</code><br />
-              • Password: <code className="bg-yellow-300 px-1 border border-black font-black">admin123</code>
-            </div>
+
 
             <div className="flex gap-2.5 pt-2">
               <button
