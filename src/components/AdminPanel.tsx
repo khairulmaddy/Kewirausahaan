@@ -215,77 +215,77 @@ export default function AdminPanel({ records, onClose, onClearAll, onDeleteRecor
 
   // --- RENDERING MAIN LOGGED IN DASHBOARD ---
   return (
-    <div className="w-full max-w-5xl mx-auto space-y-6">
+    <div className="w-full max-w-5xl mx-auto space-y-5 sm:space-y-6">
       <span id="admin-dashboard-logged-in"></span>
       {/* Top action header info */}
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-6 bg-yellow-100 border-4 border-black rounded-none shadow-[8px_8px_0px_#1A1A1A] gap-4 mb-4">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-4 sm:p-6 bg-yellow-100 border-4 border-black rounded-none shadow-[5px_5px_0px_#1A1A1A] sm:shadow-[8px_8px_0px_#1A1A1A] gap-4">
         <div>
-          <h2 className="text-xl md:text-2xl font-display font-black text-black uppercase tracking-tight">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-display font-black text-black uppercase tracking-tight">
             Panel Kontrol Admin & Rekap Guru
           </h2>
-          <p className="text-xs text-slate-700 font-semibold font-mono mt-1">
-            Merekapitulasi hasil uji kompetensi • Mata Pelajaran: Kreatif, Inovasi dan Kewirausahaan
+          <p className="text-[11px] sm:text-xs text-slate-700 font-semibold font-mono mt-1">
+            Merekapitulasi hasil uji kompetensi • Mapel: Kreatif, Inovasi & Kewirausahaan
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-2.5 w-full sm:w-auto">
+        <div className="flex flex-wrap gap-2 w-full md:w-auto">
           <button
             onClick={handleExportCSV}
-            className="flex-1 sm:flex-initial px-4 py-2.5 bg-green-300 hover:bg-green-400 border-4 border-black text-black rounded-none font-display font-black text-xs shadow-[4px_4px_0px_#1A1A1A] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[5px_5px_0px_#1A1A1A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[2px_2px_0px_#1a1a1a] transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+            className="flex-1 md:flex-initial px-3 py-2 sm:px-4 sm:py-2.5 bg-green-300 hover:bg-green-400 border-4 border-black text-black rounded-none font-display font-black text-xs shadow-[3px_3px_0px_#1A1A1A] sm:shadow-[4px_4px_0px_#1A1A1A] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0px_#1A1A1A] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[1.5px_1.5px_0px_#1a1a1a] transition-all flex items-center justify-center gap-1.5 cursor-pointer"
           >
-            <FileSpreadsheet className="w-4 h-4" />
+            <FileSpreadsheet className="w-4 h-4 text-black shrink-0" />
             Format Excel (.CSV)
           </button>
           
           <button
             onClick={handleLogout}
-            className="px-4 py-2.5 border-4 border-black bg-[#FF6B35] hover:bg-[#FF6B35]/85 text-black rounded-none font-display font-black text-xs shadow-[4px_4px_0px_#1A1A1A] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[5px_5px_0px_#1A1A1A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[2px_2px_0px_#1a1a1a] flex items-center justify-center gap-1.5 transition-all cursor-pointer"
+            className="flex-1 md:flex-initial px-3 py-2 sm:px-4 sm:py-2.5 border-4 border-black bg-[#FF6B35] hover:bg-[#FF6B35]/85 text-black rounded-none font-display font-black text-xs shadow-[3px_3px_0px_#1A1A1A] sm:shadow-[4px_4px_0px_#1A1A1A] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0px_#1A1A1A] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[1.5px_1.5px_0px_#1a1a1a] flex items-center justify-center gap-1.5 transition-all cursor-pointer"
           >
-            <LogOut className="w-4 h-4" />
+            <LogOut className="w-4 h-4 text-black shrink-0" />
             Keluar Guru
           </button>
         </div>
       </div>
 
       {/* Aggregate Stats bento layout */}
-      <div id="stats-bento-grid" className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-        <div id="stat-siswa-card" className="bg-white p-5 border-4 border-black shadow-[4px_4px_0px_#1A1A1A] flex items-center gap-4 rounded-none">
-          <div className="w-12 h-12 bg-teal-300 border-2 border-black rounded-none shadow-[2px_2px_0px_#1A1A1A] flex items-center justify-center text-black shrink-0">
-            <UserCheck className="w-6 h-6" />
+      <div id="stats-bento-grid" className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+        <div id="stat-siswa-card" className="bg-white p-3 sm:p-5 border-4 border-black shadow-[3px_3px_0px_#1A1A1A] sm:shadow-[4px_4px_0px_#1A1A1A] flex items-center gap-2.5 sm:gap-4 rounded-none">
+          <div className="w-9 h-9 sm:w-12 sm:h-12 bg-teal-300 border-2 border-black rounded-none shadow-[1.5px_1.5px_0px_#1A1A1A] flex items-center justify-center text-black shrink-0">
+            <UserCheck className="w-4.5 h-4.5 sm:w-6 sm:h-6" />
           </div>
-          <div>
-            <span className="text-[10px] text-slate-500 font-mono font-black block uppercase tracking-wider">Siswa Unik</span>
-            <span className="text-2xl font-display font-black text-black">{uniqueSiswa}</span>
-          </div>
-        </div>
-
-        <div id="stat-kuis-card" className="bg-white p-5 border-4 border-black shadow-[4px_4px_0px_#1A1A1A] flex items-center gap-4 rounded-none">
-          <div className="w-12 h-12 bg-indigo-300 border-2 border-black rounded-none shadow-[2px_2px_0px_#1A1A1A] flex items-center justify-center text-black shrink-0">
-            <Zap className="w-6 h-6" />
-          </div>
-          <div>
-            <span className="text-[10px] text-slate-500 font-mono font-black block uppercase tracking-wider">Sesi Ujian</span>
-            <span className="text-2xl font-display font-black text-black">{totalSubmissions}</span>
+          <div className="min-w-0">
+            <span className="text-[9px] sm:text-[10px] text-slate-500 font-mono font-black block uppercase tracking-wider truncate">Siswa Unik</span>
+            <span className="text-lg sm:text-2xl font-display font-black text-black">{uniqueSiswa}</span>
           </div>
         </div>
 
-        <div id="stat-skor-card" className="bg-white p-5 border-4 border-black shadow-[4px_4px_0px_#1A1A1A] flex items-center gap-4 rounded-none">
-          <div className="w-12 h-12 bg-green-300 border-2 border-black rounded-none shadow-[2px_2px_0px_#1A1A1A] flex items-center justify-center text-black shrink-0">
-            <Award className="w-6 h-6" />
+        <div id="stat-kuis-card" className="bg-white p-3 sm:p-5 border-4 border-black shadow-[3px_3px_0px_#1A1A1A] sm:shadow-[4px_4px_0px_#1A1A1A] flex items-center gap-2.5 sm:gap-4 rounded-none">
+          <div className="w-9 h-9 sm:w-12 sm:h-12 bg-indigo-300 border-2 border-black rounded-none shadow-[1.5px_1.5px_0px_#1A1A1A] flex items-center justify-center text-black shrink-0">
+            <Zap className="w-4.5 h-4.5 sm:w-6 sm:h-6" />
           </div>
-          <div>
-            <span className="text-[10px] text-slate-500 font-mono font-black block uppercase tracking-wider">Rata-Rata Skor</span>
-            <span className="text-2xl font-display font-black text-black">{averageScore}%</span>
+          <div className="min-w-0">
+            <span className="text-[9px] sm:text-[10px] text-slate-500 font-mono font-black block uppercase tracking-wider truncate">Sesi Ujian</span>
+            <span className="text-lg sm:text-2xl font-display font-black text-black">{totalSubmissions}</span>
           </div>
         </div>
 
-        <div id="stat-durasi-card" className="bg-white p-5 border-4 border-black shadow-[4px_4px_0px_#1A1A1A] flex items-center gap-4 rounded-none">
-          <div className="w-12 h-12 bg-yellow-300 border-2 border-black rounded-none shadow-[2px_2px_0px_#1A1A1A] flex items-center justify-center text-black shrink-0">
-            <Clock className="w-6 h-6" />
+        <div id="stat-skor-card" className="bg-white p-3 sm:p-5 border-4 border-black shadow-[3px_3px_0px_#1A1A1A] sm:shadow-[4px_4px_0px_#1A1A1A] flex items-center gap-2.5 sm:gap-4 rounded-none">
+          <div className="w-9 h-9 sm:w-12 sm:h-12 bg-green-300 border-2 border-black rounded-none shadow-[1.5px_1.5px_0px_#1A1A1A] flex items-center justify-center text-black shrink-0">
+            <Award className="w-4.5 h-4.5 sm:w-6 sm:h-6" />
           </div>
-          <div>
-            <span className="text-[10px] text-slate-500 font-mono font-black block uppercase tracking-wider">Rata-Rata Kerja</span>
-            <span className="text-lg font-display font-black text-black">
+          <div className="min-w-0">
+            <span className="text-[9px] sm:text-[10px] text-slate-500 font-mono font-black block uppercase tracking-wider truncate">Rata Skor</span>
+            <span className="text-lg sm:text-2xl font-display font-black text-black">{averageScore}%</span>
+          </div>
+        </div>
+
+        <div id="stat-durasi-card" className="bg-white p-3 sm:p-5 border-4 border-black shadow-[3px_3px_0px_#1A1A1A] sm:shadow-[4px_4px_0px_#1A1A1A] flex items-center gap-2.5 sm:gap-4 rounded-none">
+          <div className="w-9 h-9 sm:w-12 sm:h-12 bg-yellow-300 border-2 border-black rounded-none shadow-[1.5px_1.5px_0px_#1A1A1A] flex items-center justify-center text-black shrink-0">
+            <Clock className="w-4.5 h-4.5 sm:w-6 sm:h-6" />
+          </div>
+          <div className="min-w-0">
+            <span className="text-[9px] sm:text-[10px] text-slate-500 font-mono font-black block uppercase tracking-wider truncate">Rata Durasi</span>
+            <span className="text-base sm:text-lg font-display font-black text-black truncate">
               {averageDuration} Detik
             </span>
           </div>
@@ -293,23 +293,23 @@ export default function AdminPanel({ records, onClose, onClearAll, onDeleteRecor
       </div>
 
       {/* Main Database Table card */}
-      <div className="bg-white border-4 border-black shadow-[8px_8px_0px_#1A1A1A] rounded-none overflow-hidden">
+      <div className="bg-white border-4 border-black shadow-[5px_5px_0px_#1A1A1A] sm:shadow-[8px_8px_0px_#1A1A1A] rounded-none overflow-hidden">
         {/* Table header with filters controls */}
-        <div className="p-6 border-b-4 border-black bg-slate-50 flex flex-col lg:flex-row gap-4 items-center justify-between">
-          <h3 className="text-xs font-black uppercase tracking-wider text-black font-mono self-start lg:self-auto">
+        <div className="p-4 sm:p-6 border-b-4 border-black bg-slate-50 flex flex-col lg:flex-row gap-4 items-stretch lg:items-center justify-between">
+          <h3 className="text-[10px] sm:text-xs font-black uppercase tracking-wider text-black font-mono">
             [Daftar Submisi Penilaian ({filteredRecords.length} / {totalSubmissions})]
           </h3>
 
-          <div className="flex flex-wrap gap-3 items-center w-full lg:w-auto">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3 items-stretch sm:items-center w-full lg:w-auto">
             {/* Search Input */}
-            <div className="relative flex-1 md:w-48 lg:w-56">
-              <Search className="absolute left-3 top-2.5 w-4 h-4 text-black" />
+            <div className="relative flex-1 min-w-0">
+              <Search className="absolute left-3 top-2 w-3.5 h-3.5 text-black" />
               <input
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="CARI NAMA / KELAS..."
-                className="w-full bg-white border-2 border-black rounded-none pl-9 pr-3 py-1.5 text-xs font-bold uppercase shadow-[2px_2px_0px_#1A1A1A] focus:outline-hidden"
+                className="w-full bg-white border-2 border-black rounded-none pl-8.5 pr-3 py-1 text-[10px] sm:text-xs font-bold uppercase shadow-[1.5px_1.5px_0px_#1A1A1A] sm:shadow-[2px_2px_0px_#1A1A1A] focus:outline-hidden"
               />
             </div>
 
@@ -317,7 +317,7 @@ export default function AdminPanel({ records, onClose, onClearAll, onDeleteRecor
             <select
               value={attemptFilter}
               onChange={(e) => setAttemptFilter(e.target.value)}
-              className="bg-white border-2 border-black rounded-none px-2 py-1.5 text-xs font-bold text-black cursor-pointer shadow-[2px_2px_0px_#1A1A1A] focus:outline-hidden uppercase"
+              className="bg-white border-2 border-black rounded-none px-2 py-1 text-[10px] sm:text-xs font-bold text-black cursor-pointer shadow-[1.5px_1.5px_0px_#1A1A1A] sm:shadow-[2px_2px_0px_#1A1A1A] focus:outline-hidden uppercase"
             >
               <option value="all">Semua Kesempatan</option>
               <option value="1">Kesempatan 1</option>
@@ -329,7 +329,7 @@ export default function AdminPanel({ records, onClose, onClearAll, onDeleteRecor
             <select
               value={scoreFilter}
               onChange={(e) => setScoreFilter(e.target.value)}
-              className="bg-white border-2 border-black rounded-none px-2 py-1.5 text-xs font-bold text-black cursor-pointer shadow-[2px_2px_0px_#1A1A1A] focus:outline-hidden uppercase"
+              className="bg-white border-2 border-black rounded-none px-2 py-1 text-[10px] sm:text-xs font-bold text-black cursor-pointer shadow-[1.5px_1.5px_0px_#1A1A1A] sm:shadow-[2px_2px_0px_#1A1A1A] focus:outline-hidden uppercase"
             >
               <option value="all">Semua Status</option>
               <option value="pass">Skor Sempurna (&gt;= 80)</option>
@@ -445,7 +445,7 @@ export default function AdminPanel({ records, onClose, onClearAll, onDeleteRecor
                                 initial={{ opacity: 0, height: 0 }}
                                 animate={{ opacity: 1, height: "auto" }}
                                 exit={{ opacity: 0, height: 0 }}
-                                className="px-12 py-5 overflow-hidden text-xs"
+                                className="px-3 sm:px-12 py-4 overflow-hidden text-xs"
                               >
                                 <h4 className="font-black text-black mb-3 uppercase tracking-wider font-mono">
                                   [Lembar Lembaran Jawaban Siswa]:
@@ -456,20 +456,20 @@ export default function AdminPanel({ records, onClose, onClearAll, onDeleteRecor
                                     const ansDetails = r.answers[qId];
 
                                     return (
-                                      <div key={qId} className="p-3 bg-white border-2 border-black rounded-none shadow-[2px_2px_0px_#1A1A1A] flex justify-between items-start gap-4">
-                                        <div className="flex-1">
-                                          <p className="font-black text-black font-mono">
+                                      <div key={qId} className="p-3 bg-white border-2 border-black rounded-none shadow-[2px_2px_0px_#1A1A1A] flex justify-between items-start gap-3">
+                                        <div className="flex-1 min-w-0">
+                                          <p className="font-black text-black font-mono text-[10px] sm:text-xs">
                                             SOAL ID #{qId}
                                           </p>
-                                          <p className="text-[11px] font-bold text-slate-800 mt-1 uppercase">
-                                            DIPILIH: <span className="font-black text-indigo-900 bg-indigo-50 px-1 border border-dashed border-indigo-400">{ansDetails.selected || "Kosong"}</span>
+                                          <p className="text-[10px] sm:text-[11px] font-bold text-slate-800 mt-1 uppercase truncate">
+                                            DIPILIH: <span className="font-black text-indigo-900 bg-indigo-50 px-1 border border-dashed border-indigo-400 whitespace-normal break-words">{ansDetails.selected || "Kosong"}</span>
                                           </p>
-                                          <p className="text-[11px] font-bold text-green-700 mt-0.5 uppercase">
-                                            KUNCI: <span className="font-black bg-green-50 px-1 border border-dashed border-green-400">{ansDetails.correct}</span>
+                                          <p className="text-[10px] sm:text-[11px] font-bold text-green-700 mt-0.5 uppercase truncate">
+                                            KUNCI: <span className="font-black bg-green-50 px-1 border border-dashed border-green-400 whitespace-normal break-words">{ansDetails.correct}</span>
                                           </p>
                                         </div>
 
-                                        <span className={`font-black px-2 py-0.5 border-2 border-black text-[9px] uppercase shadow-[1px_1px_0px_#1a1a1a] rounded-none ${
+                                        <span className={`font-black px-1.5 py-0.5 sm:px-2 border-2 border-black text-[8px] sm:text-[9px] uppercase shadow-[1px_1px_0px_#1a1a1a] rounded-none shrink-0 ${
                                           ansDetails.isCorrect 
                                             ? "bg-green-300 text-black" 
                                             : "bg-red-300 text-black"

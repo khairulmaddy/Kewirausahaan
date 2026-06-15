@@ -109,7 +109,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-between py-6 px-4 bg-[#F4F1EA] relative">
+    <div className="min-h-screen flex flex-col justify-between py-4 px-3 sm:py-6 sm:px-4 bg-[#F4F1EA] relative">
       {/* Neo-brutalist styled accent corners or lines instead of soft gradient orbs */}
       <div className="absolute top-0 left-0 w-8 h-8 border-l-4 border-t-4 border-black pointer-events-none"></div>
       <div className="absolute top-0 right-0 w-8 h-8 border-r-4 border-t-4 border-black pointer-events-none"></div>
@@ -117,12 +117,12 @@ export default function App() {
       <div className="absolute bottom-0 right-0 w-8 h-8 border-r-4 border-b-4 border-black pointer-events-none"></div>
 
       {/* Global Top Navigation Header */}
-      <header className="w-full max-w-4xl mx-auto flex justify-between items-center mb-8 relative z-20">
+      <header className="w-full max-w-4xl mx-auto flex justify-between items-center mb-6 sm:mb-8 relative z-20 gap-2">
         <button 
           onClick={() => screen !== "QUIZ" && setScreen("COVER")}
-          className="flex items-center gap-2 text-black hover:bg-yellow-100 transition-all font-display font-black text-sm uppercase tracking-wider bg-white px-4 py-2 rounded-none border-4 border-black shadow-[4px_4px_0px_#1A1A1A] cursor-pointer"
+          className="flex items-center gap-1.5 sm:gap-2 text-black hover:bg-yellow-150 transition-all font-display font-black text-xs sm:text-sm uppercase tracking-wider bg-white px-2.5 py-2 sm:px-4 sm:py-2.5 rounded-none border-4 border-black shadow-[3px_3px_0px_#1A1A1A] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[2px_2px_0px_#1A1A1A] cursor-pointer"
         >
-          <GraduationCap className="w-5 h-5 text-black shrink-0" />
+          <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 text-black shrink-0" />
           <span>KIK Portal</span>
         </button>
 
@@ -130,19 +130,20 @@ export default function App() {
         {screen === "ADMIN" ? (
           <button
             onClick={() => setScreen("COVER")}
-            className="flex items-center gap-1.5 px-4 py-2 border-4 border-black bg-white text-black font-display font-black text-xs uppercase tracking-wider shadow-[3px_3px_0px_#1A1A1A] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0px_#1A1A1A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[1px_1px_0px_#1A1A1A] transition-all cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-2 sm:px-4 sm:py-2.5 border-4 border-black bg-white text-black font-display font-black text-xs uppercase tracking-wider shadow-[3px_3px_0px_#1A1A1A] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0px_#1A1A1A] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[2px_2px_0px_#1a1a1a] transition-all cursor-pointer"
           >
             <Home className="w-3.5 h-3.5 text-black shrink-0" />
-            Halaman Utama
+            <span className="hidden xs:inline">Halaman Utama</span>
+            <span className="xs:hidden">Cover</span>
           </button>
         ) : (
           screen !== "QUIZ" && (
             <button
               onClick={() => setScreen("ADMIN")}
-              className="flex items-center gap-1.5 px-4 py-2 border-4 border-black bg-yellow-300 text-black font-display font-black text-xs uppercase tracking-wider shadow-[3px_3px_0px_#1A1A1A] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0px_#1A1A1A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[1px_1px_0px_#1A1A1A] transition-all cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-2 sm:px-4 sm:py-2.5 border-4 border-black bg-yellow-300 text-black font-display font-black text-[11px] sm:text-xs uppercase tracking-wider shadow-[3px_3px_0px_#1A1A1A] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0px_#1A1A1A] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[2px_2px_0px_#1A1A1A] transition-all cursor-pointer"
             >
               <Key className="w-3.5 h-3.5 text-black shrink-0" />
-              Panitia / Admin 🔑
+              <span>Admin 🔑</span>
             </button>
           )
         )}
