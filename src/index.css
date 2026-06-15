@@ -12,7 +12,7 @@
   @keyframes gradient-shift {
     0% { background-color: #FF6B35; }
     33% { background-color: #4ECDC4; }
-    66% { background-color: #FFD166; }
+    66% { background-color: #C084FC; }
     100% { background-color: #FF6B35; }
   }
   @keyframes soft-bounce {
@@ -48,10 +48,10 @@ body {
   background-color: #FF6B35;
 }
 
-.brutalist-card-yellow {
+.brutalist-card-violet {
   border: 4px solid #1A1A1A;
   box-shadow: 6px 6px 0px #1A1A1A;
-  background-color: #FFD166;
+  background-color: #C084FC;
 }
 
 .brutalist-btn {

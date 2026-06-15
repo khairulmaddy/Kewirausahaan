@@ -48,7 +48,7 @@ export default function CoverScreen({ onStartExam, records, onOpenAdmin }: Cover
       <span id="cover-header-span"></span>
       <div 
         id="branding-header-card" 
-        className="relative overflow-hidden border-4 border-black bg-yellow-300 p-5 sm:p-8 text-black shadow-[6px_6px_0px_#1A1A1A] sm:shadow-[8px_8px_0px_#1A1A1A] mb-5 sm:mb-8"
+        className="relative overflow-hidden border-4 border-black bg-violet-300 p-5 sm:p-8 text-black shadow-[6px_6px_0px_#1A1A1A] sm:shadow-[8px_8px_0px_#1A1A1A] mb-5 sm:mb-8"
       >
         <div className="absolute top-0 right-0 p-3 opacity-10">
           <BookOpen className="w-32 h-32 sm:w-48 sm:h-48 rotate-12 text-black" />
@@ -149,7 +149,7 @@ export default function CoverScreen({ onStartExam, records, onOpenAdmin }: Cover
               
               {attemptsUsed === 0 ? (
                 <div className="flex items-start gap-2.5">
-                  <Sparkles className="w-5 h-5 mt-0.5 shrink-0 text-black fill-yellow-400" />
+                  <Sparkles className="w-5 h-5 mt-0.5 shrink-0 text-black fill-violet-300" />
                   <div>
                     <p className="font-black uppercase text-xs sm:text-sm tracking-tight font-display">Selamat Datang, ini ujian pertama Anda!</p>
                     <p className="text-[11px] sm:text-xs font-medium mt-1 leading-relaxed text-slate-800">
@@ -220,7 +220,7 @@ export default function CoverScreen({ onStartExam, records, onOpenAdmin }: Cover
               </>
             ) : currentAttemptIndex === 3 ? (
               <>
-                <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-300 animate-pulse fill-yellow-300" />
+                <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-violet-300 animate-pulse fill-violet-300" />
                 Mulai Ujian Terakhir (Mode Acak Penuh #3)
               </>
             ) : (

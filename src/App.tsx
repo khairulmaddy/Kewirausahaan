@@ -120,7 +120,7 @@ export default function App() {
       <header className="w-full max-w-4xl mx-auto flex justify-between items-center mb-6 sm:mb-8 relative z-20 gap-2">
         <button 
           onClick={() => screen !== "QUIZ" && setScreen("COVER")}
-          className="flex items-center gap-1.5 sm:gap-2 text-black hover:bg-yellow-150 transition-all font-display font-black text-xs sm:text-sm uppercase tracking-wider bg-white px-2.5 py-2 sm:px-4 sm:py-2.5 rounded-none border-4 border-black shadow-[3px_3px_0px_#1A1A1A] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[2px_2px_0px_#1A1A1A] cursor-pointer"
+          className="flex items-center gap-1.5 sm:gap-2 text-black hover:bg-violet-100 transition-all font-display font-black text-xs sm:text-sm uppercase tracking-wider bg-white px-2.5 py-2 sm:px-4 sm:py-2.5 rounded-none border-4 border-black shadow-[3px_3px_0px_#1A1A1A] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[2px_2px_0px_#1A1A1A] cursor-pointer"
         >
           <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 text-black shrink-0" />
           <span>KIK Portal</span>
@@ -140,7 +140,7 @@ export default function App() {
           screen !== "QUIZ" && (
             <button
               onClick={() => setScreen("ADMIN")}
-              className="flex items-center gap-1.5 px-3 py-2 sm:px-4 sm:py-2.5 border-4 border-black bg-yellow-300 text-black font-display font-black text-[11px] sm:text-xs uppercase tracking-wider shadow-[3px_3px_0px_#1A1A1A] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0px_#1A1A1A] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[2px_2px_0px_#1A1A1A] transition-all cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-2 sm:px-4 sm:py-2.5 border-4 border-black bg-violet-300 text-black font-display font-black text-[11px] sm:text-xs uppercase tracking-wider shadow-[3px_3px_0px_#1A1A1A] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0px_#1A1A1A] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[2px_2px_0px_#1A1A1A] transition-all cursor-pointer"
             >
               <Key className="w-3.5 h-3.5 text-black shrink-0" />
               <span>Admin 🔑</span>

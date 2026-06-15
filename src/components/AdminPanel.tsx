@@ -134,7 +134,7 @@ export default function AdminPanel({ records, onClose, onClearAll, onDeleteRecor
           <div className="absolute top-0 left-0 right-0 h-2 bg-[#FF6B35]"></div>
 
           <div className="text-center mb-6">
-            <div className="w-16 h-16 bg-yellow-300 border-4 border-black rounded-none flex items-center justify-center mx-auto mb-3 shadow-[3px_3px_0px_#1A1A1A]">
+            <div className="w-16 h-16 bg-violet-300 border-4 border-black rounded-none flex items-center justify-center mx-auto mb-3 shadow-[3px_3px_0px_#1A1A1A]">
               <Key className="w-8 h-8 text-black" />
             </div>
             <h2 className="text-2xl font-display font-black text-black uppercase tracking-tight">
@@ -218,7 +218,7 @@ export default function AdminPanel({ records, onClose, onClearAll, onDeleteRecor
     <div className="w-full max-w-5xl mx-auto space-y-5 sm:space-y-6">
       <span id="admin-dashboard-logged-in"></span>
       {/* Top action header info */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-4 sm:p-6 bg-yellow-100 border-4 border-black rounded-none shadow-[5px_5px_0px_#1A1A1A] sm:shadow-[8px_8px_0px_#1A1A1A] gap-4">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-4 sm:p-6 bg-violet-100 border-4 border-black rounded-none shadow-[5px_5px_0px_#1A1A1A] sm:shadow-[8px_8px_0px_#1A1A1A] gap-4">
         <div>
           <h2 className="text-lg sm:text-xl md:text-2xl font-display font-black text-black uppercase tracking-tight">
             Panel Kontrol Admin & Rekap Guru
@@ -280,7 +280,7 @@ export default function AdminPanel({ records, onClose, onClearAll, onDeleteRecor
         </div>
 
         <div id="stat-durasi-card" className="bg-white p-3 sm:p-5 border-4 border-black shadow-[3px_3px_0px_#1A1A1A] sm:shadow-[4px_4px_0px_#1A1A1A] flex items-center gap-2.5 sm:gap-4 rounded-none">
-          <div className="w-9 h-9 sm:w-12 sm:h-12 bg-yellow-300 border-2 border-black rounded-none shadow-[1.5px_1.5px_0px_#1A1A1A] flex items-center justify-center text-black shrink-0">
+          <div className="w-9 h-9 sm:w-12 sm:h-12 bg-violet-300 border-2 border-black rounded-none shadow-[1.5px_1.5px_0px_#1A1A1A] flex items-center justify-center text-black shrink-0">
             <Clock className="w-4.5 h-4.5 sm:w-6 sm:h-6" />
           </div>
           <div className="min-w-0">
@@ -404,7 +404,7 @@ export default function AdminPanel({ records, onClose, onClearAll, onDeleteRecor
                           <span className={`inline-block px-3 py-1 border-2 border-black text-xs font-display font-black leading-none shadow-[2px_2px_0px_#1A1A1A] ${
                             scorePassed 
                               ? "bg-green-300 text-black" 
-                              : "bg-yellow-200 text-black"
+                              : "bg-violet-200 text-black"
                           }`}>
                             {r.score}%
                           </span>
@@ -414,7 +414,7 @@ export default function AdminPanel({ records, onClose, onClearAll, onDeleteRecor
                             {/* Inspect Expand trigger button */}
                             <button
                               onClick={() => toggleRowExpand(r.id)}
-                              className="p-1.5 text-black hover:bg-yellow-200 border-2 border-transparent hover:border-black rounded-none transition-all cursor-pointer"
+                              className="p-1.5 text-black hover:bg-violet-200 border-2 border-transparent hover:border-black rounded-none transition-all cursor-pointer"
                               title="Detail Jawaban Siswa"
                             >
                               {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}

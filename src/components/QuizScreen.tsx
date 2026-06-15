@@ -221,7 +221,7 @@ export default function QuizScreen({
       if (attemptIndex === 3) {
         return baseStyles + "bg-indigo-300 text-black translate-x-[1.5px] translate-y-[1.5px] shadow-[1.5px_1.5px_0px_#1A1A1A]";
       }
-      return baseStyles + "bg-yellow-300 text-black translate-x-[1.5px] translate-y-[1.5px] shadow-[1.5px_1.5px_0px_#1A1A1A]";
+      return baseStyles + "bg-violet-300 text-black translate-x-[1.5px] translate-y-[1.5px] shadow-[1.5px_1.5px_0px_#1A1A1A]";
     }
 
     // Default State - highly visible dark text color on white background
@@ -245,7 +245,7 @@ export default function QuizScreen({
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
               <span className="font-black text-black text-sm sm:text-base uppercase tracking-tight truncate max-w-[150px] sm:max-w-none">{studentName}</span>
-              <span className="text-[10px] sm:text-xs px-1.5 py-0.5 bg-yellow-200 border-2 border-black font-black text-black uppercase shadow-[1px_1px_0px_#1A1A1A]">
+              <span className="text-[10px] sm:text-xs px-1.5 py-0.5 bg-violet-200 border-2 border-black font-black text-black uppercase shadow-[1px_1px_0px_#1A1A1A]">
                 Kel: {studentClass}
               </span>
             </div>
@@ -347,7 +347,7 @@ export default function QuizScreen({
                   {currentQuestion.explanation}
                 </p>
                 <div className="mt-4 pt-3 border-t-2 border-dashed border-black flex flex-wrap gap-2 text-[9px] sm:text-[10px] font-mono font-black uppercase">
-                  <span className="px-2 py-1 bg-yellow-300 border border-black shadow-[1px_1px_0px_#1A1A1A] text-black">
+                  <span className="px-2 py-1 bg-violet-300 border border-black shadow-[1px_1px_0px_#1A1A1A] text-black">
                     Pilihan Kunci: {currentOriginalCorrectKey()}
                   </span>
                   <span className="px-2 py-1 bg-green-300 border border-black shadow-[1px_1px_0px_#1A1A1A] text-black">

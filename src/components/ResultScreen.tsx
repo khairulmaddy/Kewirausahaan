@@ -47,7 +47,7 @@ export default function ResultScreen({
       <div className={`p-5 sm:p-8 border-4 border-black text-black shadow-[5px_5px_0px_#1A1A1A] sm:shadow-[8px_8px_0px_#1A1A1A] mb-5 sm:mb-8 rounded-none text-center ${
         isExcellent 
           ? "bg-green-200" 
-          : "bg-yellow-300"
+          : "bg-violet-300"
       }`}>
         <div className="flex justify-center mb-3 sm:mb-4">
           {isExcellent ? (
